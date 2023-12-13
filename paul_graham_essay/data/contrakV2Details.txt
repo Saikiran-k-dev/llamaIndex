@@ -1,0 +1,455 @@
+1. Network Issue
+Second dot blinking in contrak modules Seven Segment Display.
+
+Sending wrong Date and Time.
+
+TPC not charged above the rated voltage.
+
+SIM connection error
+
+2. Feedback Issue
+COMP FB LED is off in the contrak module.
+
+Grid FB LED is off in the contrak module.
+
+DG FB LED is off in the contrak module.
+
+AGITATOR FB LED is off in the contrak module.
+
+3.TPC Issue
+Battery(TPC)
+
+Input and Output Voltage
+
+TPC charging issue
+
+4. Sensor Issue
+Temperature Sensor:
+
+Error message on the seven segment display in the contrak module(tttt).
+
+Temperature not changing in the display when MV changes.
+
+Temperature sensor placement issue.
+
+Volume Sensor:
+
+Housing issue.
+
+Placement issue.
+
+Loose contact of the volume sensor connector.
+
+Physical damage of the volume sensor.
+
+Sensor drift
+The sentinal value of tempsens is 8888
+6. Process connection issue
+7. Contrak Module
+Feedback LED's not turning ON.
+
+Seven segment display not turning ON.
+
+All LED's in the module are turned ON and display is freezed.
+
+Temperature or Volume data is not changing in the Contrak module display.
+
+Module not connecting to the network.
+
+8. Electrical Noise Issue
+9. Line voltage fluctuations
+1. Why second dot will blink in seven segment display from left in contrak module?
+The Second dot will blink on the seven segment dispaly of contrak module due to the following reasons
+
+The Error code in display password mode, should be 0.
+If the value is not 0, then check for the cases below.
+Case 1:If the error code is 10, then reboot the board.
+Case 2:If the error code is 11,12 then check for sim activation, internet connectivity.
+Case 3:If the error code is 13 to 15 then it could be unknown issue.
+
+Check for the signal strength in display password mode by pressing enter key.
+If the value is between 10 to 30 then the network is good.
+
+If the error code is 0 and the signal strength is 99 or less then 10 then check for the antenna position. Change the antenna position to get good signal strength.
+
+2. What is the cause for the Contrak module to send wrong date and time?
+If the board is sending wrong date and time then first check for the service provider settings.
+
+Check by interchanging the SIM to different service provider.
+
+3. What is the cause for the SIM to stop working in the running site?
+The Error code in display password mode, should be 0.
+If the value is not 0, then check for the cases below.
+Case 1:If the error code is 10, then reboot the board.
+Case 2:If the error code is 11,12 then check for sim activation,internet connectivity.
+Case 3:If the error code is 13 to 15 then it could be unknown issue.
+
+Check for the signal strength in display password mode by pressing enter key.
+If the value is between 10 to 30 then the network is good.
+
+If the error code is 0 and the signal strength is 99 or less then 10 then check for the antenna position. Change the antenna position to get good signal strength.
+
+The network isssue comes when TPC is not charged above the rated voltage.
+
+Remove the SIM from the module and check out with different service provider.
+
+Try to send an SMS from the registered SIM to confirm the working of the SIM.
+
+4. What happens when TPC is not charged above the rated voltage?
+The network isssue comes when TPC is not charged above the rated voltage.
+
+First check wheather grid or DG is available to charge the TPC.
+
+Check the input to the TPC(230 Vac), and 5A fuse wheather it has blown out.
+
+Check the output of the TPC(12 V), also check for 0.5A fuse wheather it has blown out.
+
+5. Why the COMP FB LED is off on the contral module?
+The COMPFB Led is off on the contrak module due to the following reasons
+
+If VPR is used, Compfb led is off for the various cases as below
+Case 1: R Y B would have been interchanged at the site.
+Case 2: VPR might gone bad.
+(The secondary relay does not switch ON if phase is correct). Case 3: Output voltage of the VPR should be 4.45 V.
+Case 4:25 pin connector cable would have gone bad or the feedback wire would have got disconnected.
+
+If CT sensor is used, Compfb led is off for the various cases as below
+Case 1: The voltage rating must be in the below range:
+Input: 4.5V at Rand B cable.
+Output: 0.7 V-3 V at Gand B cable.
+If the Output is less than 0.7 V then may have to increase the number of turns of the CT Sensor coil.
+
+There might be loose contact at AC section or DC section.
+
+The COMPFB CT sensor IC(4N35) might have gone bad.
+
+6. Why the AGZ FB LED is continously on/off when no power in the contral module?
+If CT sensor is used, then
+
+The AGZ FB led is continously OFF if the Vcc(Red Cable) is open.
+Check input at Red and Blue cable.
+Check output at Green and Blue.
+
+The AGZ FB led is continously ON if the Gnd(Blue cable) is open.
+Check input at Red and Blue cable.
+Check output at Green and Blue cable.
+
+There might be loose contact at any end of the connector.
+
+If Relay PCB is used, then
+The Agitator feedback is OFF due to the failure of relay PCB because of power fluctuations,electrical surge etc
+
+7. Why the Grid FB LED is off on the contral module?
+The Grid FB led is off, on the contrak module due to following reasons
+
+If VPR is used, Grid FB led is off due to following reasons.
+Case 1:R Y B would have been interchanged at the site.
+Case 2:VPR might havegone bad.
+(The secondary relay does not switch ON if phase is correct).
+Case 3:Output voltage of the VPR should be 4.45 V.
+
+If CT sensor is used, Grid FB is off for the various cases as below
+Case 1: The voltage rating must be in the below range
+Input: 4.45V at Red and Blue cable.
+Output: 0.7 V-3 V at Green and Blue cable.
+If the Output is less than 0.7 V then may have to increase the number of turns of the CT Sensor coil.
+
+There might be loose contacts.
+
+The Grid FB IC might have gone bad.
+
+8. Why the DG FB LED is off on the contrak module
+If there is relay failure the DG FB LED is off on the contrak module, or there might be an issue with the output of the led in the panel board.
+
+Cathode 4.43V.
+Anode 2.5V.
+
+9.Why the CHARGER ON Led is off on the TPC?
+The 5A fuse in the TPC would have blown out, in such case the charger on Led is off on the TPC with grid supply.
+
+10. What are the various issues that causes the failure of TPC?
+1. TPC backup issue
+
+2. Not charging the TPC to the rated voltage.
+
+3. Fuse issue(5A and 0.5A.)
+
+4. No output from the TPC(12V).
+
+5. Circuit failure of the TPC.
+
+6. Transformer failure.
+
+11. What are two main parameters that causes the failure of fuse box?
+High volatge and Short circuit are the two main parameters that causes the failure of fuse box.
+
+12. Why the Error message(tttt) will appear on the Seven segment dispaly on the contrak module?
+The Error message tttt will appear on the seven segment dispaly of contrak module if there is accuracy mismatch between temperature sensor output voltage and the temperature of the seven segment display of contrak module.
+If there is any accuracy mismatch in that case we may have to analyse the output of the temperature sensor.
+Also the placement of the temperature sensor in the BMC.
+
+13. What happens when the temperature sensor is not placed in the BMC in proper position?
+The output of temperature sensor is always 0 if there is any loose contact or if temperature sensor is not placed in the proper position in the BMC.
+
+14. What steps to be taken when temperature does not change in the display of contrak module with mV change?
+The below steps to be taken if temperature doesn't changes with mV
+
+Case 1: Analyse the output voltage of the temperature sensor, and match the accuracy with temperature of the seven segment display of contrak module.
+
+Case 2: Check mV at the temperature connector.
+
+Case 3: Might be the board issue(Required to send board for office testing).
+
+15. What are the effects of Temperature sensor placement issue?
+The temperature exceeds above the valid temperature(70C) if the placement is not proper in the BMC.
+If the placement has changed in the BMC then place it back to the normal position and tighten the screws of the BMC to avoid future misplacement.
+
+16. What are the various parameters that causes the failure of relay pcb?
+The various parameters that damages the relay pcb is as given below
+
+1. High voltage causes the relay pcb to burn
+
+2. Electrical surge
+
+3. Voltage fluctuations.
+
+17. Why the drift of volume occurs from actual in the field?
+Drift of volume from actual occurs for the various reasons as listed below
+
+One of the cause is due to change of position of sensor attached to the process pipe.
+
+Diaphragm getting damage during clean in process(CIP) of BMC, where cleaning brush is used for cleaning near the sensor.
+
+Drift of volume,when initial placed in field.
+
+Noise effecting ADC values resulting in unstable volume display.
+
+18. What are the actions taken in the field to avoid the drift of volume from actual?
+Below are the actions taken to avoid drift of volume from actual
+
+Change of position has been avoided by placing stand attached to ground from sensor.
+
+Steel plate is placed in process pipe below sensor placement which protects sensor diaphragm getting damaged.
+
+Testing of new sensors before deploying to the field to avoid initial drift.
+
+19. Why the volume part disappers in the chilling graph of contrak portal?
+The main reason for the disappearance of the volume in the chilling graph is the loose contact of the volume sensor connector.
+
+The other reason could be an issue with the volume sensor.
+
+20.What are various issues that the volume sensor will encounter in the field?
+The various issues are listed below
+
+Drift in the volume from actual.
+
+Volume will not be stable in both morning and evening sessions.
+
+Constant drift at lower and higher volume.
+
+Malfunctioning and the random behaviour at the volume sensor.
+
+Major failure occurs if the output current is not in range.
+
+No change in the output irrespective of pressure applied.
+
+21. Why the housing is important for the volume?
+Housing is provided to the volume sensor in the field mainly to protect against water spillage in the field and also to avoid moisture formation on the volume sensor.
+
+22. What are the precautions taken while selecting a process connection for the different BMC?
+Below are the different parameters to be considered while selecting the process connection for the particular BMC
+
+Process connection mismatch
+
+SS pipe alignment
+
+Gaskets
+
+Leakage
+
+Volume sensor thread mismatch.
+
+23. Why the seven segment display do not turn ON on the contrak module?
+If the seven segment display does not turn ON on the contrak module then there might be an issue with the FRC cable connected from HMS board to panel board.
+
+24. What are the steps taken when the module does not connect to the network?
+If the module does not connect to the network then check for the various cases below
+
+Check for the service provider settings
+
+Check for the sim position in the sim slot for its correct position
+
+Check the sim by interchanging to different service provider
+
+25. What is the cause for the connectors failure?
+Loose crimping causes the failure of the connectors.
+
+26. What are the steps taken if there is any electrical noise?
+Electrical noise issue comes if Gnd is not proper, which inturn causes the ADC variation.
+The below are the steps taken to address the noise issue
+
+Check for the earthing points.
+
+Check for the disturbance from lights,focus lights.
+
+Address the TPC,Board,Transformer grounding.
+
+27. What are the problems related to quality of power supply?
+Voltage fluctuations,power surges and spikes.
+
+Alert Definitions
+Alert name	Description	Level	definition
+agitator_on	Agitator On	info	
+agitator_off	Agitator Off	info	
+compressor_on	Compressor On	info	
+chilling_pump_on	Chilling pump On	info	
+chilling_pump_off	Chilling pump Off	info	
+chilling_started	Chilling started	info	
+chilling_completed	Chilling completed	info	
+milk_lifted	Milk lifted	info	
+cip_detected	CIP	info	
+grid_on	Grid On	info	
+grid_off	Grid Off	info	
+agitator_malfunction	Agitator malfunction	critical	
+Detect agitator not running when chilling is in progress
+
+milk-volume should be greater than 100
+milk temperature >= 4.1 (milk is not yet chilled)
+agitator is off
+volume variation should not be more than 10
+
+agitator_malfunction_stage_2	Agitator malfunction stage-2	critical	
+same as stage-1 above with condition persisting for more than 20 minutes
+
+agitator_malfunction_stage_3	Agitator malfunction stage-3	critical	
+same as stage-1 above with condition persisting for more than 30 minutes
+
+chilling_pump_malfunction	Chilling pump malfunction	critical	
+milk-volume should be greater than 100
+chilling pump is off
+volume variation should not be more than 10
+milk temperature >= 4.1 (milk is not yet chilled)
+
+chilling_pump_malfunction_stage_2	Chilling pump malfunction stage-2	critical	
+same as stage-1 above with condition persisting for more than 30 minutes
+
+chilling_pump_malfunction_stage_3	Chilling pump malfunction stage-3	critical	
+same as stage-1 above with condition persisting for more than 60 minutes
+
+compressor_malfunction	Compressor malfunction	critical	
+Compressor turned off when chilling is not yet complete
+
+milk-volume should be greater than 100
+volume variation should not be more than 10
+compressor is off
+battery temperature is greater than -4 degrees
+Grid is on
+
+compressor_malfunction_stage_2	Compressor malfunction stage-2	critical	
+milk-volume should be greater than 100
+volume variation should not be more than 10
+compressor is off
+battery temperature is greater than -4 degrees for more than 10 mins
+
+compressor_malfunction_stage_3	Compressor malfunction stage-3	critical	
+milk-volume should be greater than 100
+volume variation should not be more than 10
+compressor is off
+battery temperature is greater than -4 degrees for more than 30 mins
+
+condenser_malfunction	Condenser malfunction	critical	
+milk-volume should be greater than 100
+volume variation should not be more than 10
+condenser is off
+battery temperature is greater than -4 degrees
+
+condenser_malfunction_stage_2	Condenser malfunction stage-2	critical	
+same as stage-1 above with condition persisting for more than 30 minutes
+
+condenser_malfunction_stage_3	Condenser malfunction stage-3	critical	
+same as stage-1 above with condition persisting for more than 60 minutes
+
+pump2_malfunction	Pump2 malfunction	critical	
+Detect charging pump(pump2) not running when battery temperature is high
+
+milk volume should be greater than 100
+grid is on
+charging pump(pump2) is off
+volume variation should not be more than 10
+battery temperature is greater than -4 degrees
+
+pump2_malfunction_stage_2	Pump2 malfunction stage-2	critical	
+same as stage-1 above with condition persisting for more than 30 minutes
+
+pump2_malfunction_stage_3	Pump2 malfunction stage-3	critical	
+same as stage-1 above with condition persisting for more than 60 minutes
+
+grid_off_stage_2	Grid off stage-2	critical	
+milk volume should be greater than 100
+grid is off for more than 15 mins
+
+grid_off_stage_3	Grid off stage-3	critical	
+milk volume should be greater than 100
+grid is off for more than 30 mins
+
+milk_lifted_undercooled	Milk lifted undercooled	critical	
+milk lifted with temperature greater than 4.1 degrees
+
+milk_undercooled	Milk undercooled	critical	
+Detect issue with rate of temperature decrease
+
+milk volume should be greater than 100
+milk temperature greater than 4.1
+volume variation should not be more than 0.5 kg
+In a 15 minutes window, rate of temperature decrease less than 0.6 degrees(when milk temperature is greater than 10)
+In a 15 minutes window, rate of temperature decrease less than 0.3 degrees(when milk temperature is less than 10)
+Alert occurrence is limited to max one per hour.
+
+
+milk_undercooled_stage_2	Milk undercooled stage-2	critical	
+same as stage-1 above with time window as 20 minutes
+
+milk_undercooled_stage_3	Milk undercooled stage-3	critical	
+same as stage-1 above with time window as 40 minutes
+
+agitator_malfunction_after_chilling	Agitator malfunction after chilling	critical	
+Detect malfunction in agitator after chilling. The agitator is supposed to run for 2 minutes after every 13 minutes
+
+milk volume should be greater than 100
+chilling pump is off
+milk temperature less than 4.1 degrees
+agitator run duration less than 110 seconds or greater than 130 seconds
+OR
+agitator off duration less than 770 seconds (<13 mins) or 790 seconds.
+
+milk_overchilled	Milk overchilled	critical	
+milk volume should be greater than 100
+chilling pump is on
+milk temperature less than 3 degrees
+
+cip_not_done	CIP not done	critical	
+Detect CIP activity not done
+
+milk volume should be greater than 100
+then milk volume should become less than 100
+followed by milk volume should be less than 50
+followed by milk volume should be less than 10 within 30 mins of previous event
+
+panel_trip	Panel trip	critical	
+Detect promethean panel getting tripped during the chilling process
+
+milk volume should be greater than 100
+milk temperature greater than 4.1
+grid is on
+chillingpump, compressor and agitator are off
+
+panel_trip_stage_2	Panel trip stage-2	critical	
+same as stage-1 above
+
+>
+tss_temp_alert	TSS Temperature	critical	
+Scheduled cron alert at 5:30 AM and 3:30 PM if battery temp is greater than -4 at that point in time. ABC in-charge should should get alert for the ABC to which he is associated
+
+tss_temp_alert_stage_2	TSS Temperature stage-2	critical	
+same as stage-1
+CC IC/Maintenance/RDE role users should get alert for all ABCs to which they are associated in one message
